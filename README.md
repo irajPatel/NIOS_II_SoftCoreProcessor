@@ -1,33 +1,43 @@
-# NIOS_II_SoftCoreProcessor
+# CORES Softcore Processor using Platform Designer
+
+## Description
+
+CORES is a softcore processor designed using Quartus Prime Lite, version 18.1, and created with the help of Platform Designer (formerly known as Qsys). This softcore processor provides a customizable and configurable processing unit that can be integrated into FPGA-based designs. It includes the following components:
+
+- **PLL (Phase-Locked Loop):** Used for clock synchronization and frequency multiplication, generating stable clock signals for different modules within the processor.
+- **ADC (Analog-to-Digital Converter):** Enables the processor to convert analog signals to digital data, particularly useful when interfacing with external analog sensors or inputs.
+- **Memory:** Incorporates on-chip memory elements, including RAM and flash, for data storage and retrieval.
+- **Clock Management:** Utilizes clock sources and clock crossing bridges to manage clock signals within the design.
+- **Avalon Interface:** Provides a memory-mapped interface for seamless communication between different modules in the processor.
+- **Interval Timer:** Adds a timer functionality to the design for various timing-related operations.
+
+## Software Requirements
+
+- Quartus Prime Lite, version 18.1 (or compatible)
+
+## Integration Steps
+
+To integrate the CORES softcore processor into your FPGA project, follow these steps:
+
+1. Launch Quartus Prime.
+2. Click on the "File" menu, select "New Project Wizard," and create a new project (e.g., NIOS_5).
+3. Choose the MAX 10 family and specify the target board.
+4. Import the CORES processor IP and configure the project settings.
+5. Open Platform Designer (formerly Qsys) from the Tools menu.
+6. Add and configure the specific components mentioned above using the Platform Designer GUI.
+7. Establish connections between components (e.g., clock, reset, data).
+8. Generate HDL (Verilog) for your design.
+9. Integrate the generated HDL into your FPGA project.
 
 
-CORES Softcore Processor
-Description
-CORES is a softcore processor developed using the Quartus Prime Platform Designer (formerly known as Qsys). This softcore processor is designed to provide a customizable and configurable processing unit that can be integrated into FPGA-based designs. The processor includes various components such as PLL (Phase-Locked Loop) and ADC (Analog-to-Digital Converter), allowing it to perform specific tasks based on the application requirements.
 
-Components
-1. PLL (Phase-Locked Loop)
-The PLL component in CORES is used for clock synchronization and frequency multiplication. It helps generate stable clock signals for different modules within the processor, ensuring proper timing and synchronization of operations.
+## Additional Resources
 
-2. ADC (Analog-to-Digital Converter)
-The ADC component is responsible for converting analog signals to digital data. This is particularly useful when interfacing with external analog sensors or inputs. The ADC in CORES enables the processor to process real-world analog data within FPGA designs.
+For advanced FPGA design concepts, FPGA cloud resources, and further enhancing your FPGA design skills, consider taking the following course:
 
-Integration and Connections
-CORES is designed to be easily integrated into FPGA projects using the Quartus Prime Platform Designer. To use CORES in your project, follow these steps:
+[Course Title: Advanced FPGA Design with Quartus Prime and Softcore Processors](https://www.coursera.org/learn/fpga-softcore-proccessors-ip/home/welcome)
 
-Open Quartus Prime Platform Designer.
-Import the CORES processor IP.
-Configure the processor parameters based on your project requirements.
-Connect the processor to other modules in your design (e.g., memory, peripherals) using the Platform Designer GUI.
-For a detailed walkthrough and demonstration of integrating the CORES processor into your FPGA design, please refer to the following video tutorial:
+This course covers advanced topics related to FPGA design, softcore processors, and practical exercises to strengthen your FPGA design capabilities.
 
-Link to Video Tutorial
+---
 
-Additional Resources
-For a comprehensive understanding of FPGA design, the Quartus Prime Platform Designer, and advanced topics related to softcore processors, consider taking the following course:
-
-Course Title: Advanced FPGA Design with Quartus Prime and Softcore Processors
-
-This course covers advanced FPGA design concepts, softcore processors, and hands-on exercises to enhance your FPGA design skills.
-
- <https://www.coursera.org/learn/fpga-softcore-proccessors-ip/lecture/ckJZL/platform-designer-live-demo> 

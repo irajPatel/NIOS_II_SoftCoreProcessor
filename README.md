@@ -34,7 +34,7 @@ To get started with the CORES softcore processor project, follow these steps:
 
 ## Video Tutorial
 
-We highly recommend watching the video tutorial to see the entire integration process in action:
+I highly recommend watching the video tutorial to see the entire integration process in action:
 
 [Link to Video Tutorial](https://www.coursera.org/learn/fpga-softcore-proccessors-ip/lecture/ckJZL/platform-designer-live-demo)
 

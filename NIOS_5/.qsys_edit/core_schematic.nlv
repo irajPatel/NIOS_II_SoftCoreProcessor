@@ -1,0 +1,59 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst core.nios2_gen2_0.reset_bridge -pg 1
+preplace inst core.modular_adc_0.st_splitter_internal -pg 1
+preplace inst core.modular_adc_0.sample_store_internal -pg 1
+preplace inst core.clk_1 -pg 1 -lvl 1 -y 720
+preplace inst core.modular_adc_0.sequencer_internal -pg 1
+preplace inst core.master_0.b2p_adapter -pg 1
+preplace inst core.master_0.clk_src -pg 1
+preplace inst core.modular_adc_0.cb_inst -pg 1
+preplace inst core.pio_0 -pg 1 -lvl 5 -y 840
+preplace inst core.onchip_flash_0 -pg 1 -lvl 5 -y 360
+preplace inst core.master_0.fifo -pg 1
+preplace inst core.pio_1 -pg 1 -lvl 5 -y 540
+preplace inst core.mm_clock_crossing_bridge_0 -pg 1 -lvl 4 -y 740
+preplace inst core.master_0.p2b -pg 1
+preplace inst core.master_0.b2p -pg 1
+preplace inst core.master_0 -pg 1 -lvl 2 -y 770
+preplace inst core.altpll_0 -pg 1 -lvl 3 -y 740
+preplace inst core.nios2_gen2_0.cpu -pg 1
+preplace inst core.master_0.p2b_adapter -pg 1
+preplace inst core.altpll_1 -pg 1 -lvl 5 -y 30
+preplace inst core -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst core.nios2_gen2_0.clock_bridge -pg 1
+preplace inst core.modular_adc_0.adc_monitor_internal -pg 1
+preplace inst core.modular_adc_0.control_internal -pg 1
+preplace inst core.modular_adc_0 -pg 1 -lvl 5 -y 180
+preplace inst core.sysid_qsys_0 -pg 1 -lvl 5 -y 660
+preplace inst core.nios2_gen2_0 -pg 1 -lvl 2 -y 500
+preplace inst core.modular_adc_0.adc_monitor_internal.clock_bridge -pg 1
+preplace inst core.master_0.transacto -pg 1
+preplace inst core.modular_adc_0.rst_inst -pg 1
+preplace inst core.master_0.clk_rst -pg 1
+preplace inst core.timer_0 -pg 1 -lvl 5 -y 740
+preplace inst core.modular_adc_0.adc_monitor_internal.reset_bridge -pg 1
+preplace inst core.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst core.onchip_memory2_0 -pg 1 -lvl 5 -y 460
+preplace inst core.modular_adc_0.adc_monitor_internal.trace_endpoint -pg 1
+preplace inst core.modular_adc_0.adc_monitor_internal.core -pg 1
+preplace inst core.master_0.timing_adt -pg 1
+preplace inst core.clk_0 -pg 1 -lvl 2 -y 640
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)pio_0.external_connection,(SLAVE)core.pio_0_external_connection) 1 0 5 NJ 870 NJ 870 NJ 870 NJ 870 NJ
+preplace netloc FAN_OUT<net_container>core</net_container>(SLAVE)pio_1.s1,(SLAVE)timer_0.s1,(SLAVE)sysid_qsys_0.control_slave,(MASTER)mm_clock_crossing_bridge_0.m0,(SLAVE)pio_0.s1) 1 4 1 1410
+preplace netloc FAN_OUT<net_container>core</net_container>(SLAVE)onchip_memory2_0.clk1,(SLAVE)modular_adc_0.adc_pll_clock,(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_0.clk,(SLAVE)timer_0.clk,(SLAVE)mm_clock_crossing_bridge_0.s0_clk,(MASTER)altpll_0.c0,(SLAVE)onchip_flash_0.clk) 1 1 4 420 710 NJ 710 1080 710 1370
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)core.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 650 NJ
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)core.reset) 1 0 2 NJ 670 NJ
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)clk_1.clk_in,(SLAVE)core.clk_0) 1 0 1 NJ
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)altpll_1.areset_conduit,(SLAVE)core.altpll_1_areset_conduit) 1 0 5 NJ 40 NJ 40 NJ 40 NJ 40 NJ
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)clk_1.clk_in_reset,(SLAVE)core.reset_0) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>core</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)mm_clock_crossing_bridge_0.s0_reset,(SLAVE)altpll_1.inclk_interface_reset,(SLAVE)mm_clock_crossing_bridge_0.m0_reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)pio_1.reset,(SLAVE)timer_0.reset,(MASTER)clk_1.clk_reset,(SLAVE)pio_0.reset,(SLAVE)modular_adc_0.reset_sink,(SLAVE)master_0.clk_reset,(MASTER)master_0.master_reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)onchip_flash_0.nreset,(SLAVE)nios2_gen2_0.reset) 1 1 4 400 850 800 570 1120 730 1430
+preplace netloc INTERCONNECT<net_container>core</net_container>(SLAVE)modular_adc_0.sequencer_csr,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)mm_clock_crossing_bridge_0.s0,(MASTER)nios2_gen2_0.data_master,(SLAVE)onchip_flash_0.data,(SLAVE)onchip_memory2_0.s1,(SLAVE)modular_adc_0.sample_store_csr,(SLAVE)onchip_flash_0.csr) 1 1 4 400 460 820 550 1160 510 1410
+preplace netloc FAN_OUT<net_container>core</net_container>(MASTER)clk_1.clk,(SLAVE)altpll_1.inclk_interface,(SLAVE)modular_adc_0.clock,(SLAVE)master_0.clk) 1 1 4 380 730 NJ 730 NJ 690 1350
+preplace netloc FAN_OUT<net_container>core</net_container>(MASTER)altpll_0.c2,(SLAVE)pio_1.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)mm_clock_crossing_bridge_0.m0_clk) 1 3 2 1060 670 1450
+preplace netloc FAN_OUT<net_container>core</net_container>(SLAVE)timer_0.irq,(SLAVE)pio_1.irq,(MASTER)nios2_gen2_0.irq) 1 2 3 NJ 590 NJ 590 1390
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)core.pio_1_external_connection,(SLAVE)pio_1.external_connection) 1 0 5 NJ 440 NJ 440 NJ 530 NJ 570 NJ
+preplace netloc EXPORT<net_container>core</net_container>(SLAVE)core.altpll_1_locked_conduit,(SLAVE)altpll_1.locked_conduit) 1 0 5 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc POINT_TO_POINT<net_container>core</net_container>(MASTER)clk_0.clk,(SLAVE)altpll_0.inclk_interface) 1 2 1 780
+levelinfo -pg 1 0 170 1770
+levelinfo -hier core 180 210 540 870 1220 1570 1760

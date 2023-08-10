@@ -1,0 +1,254 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\intelFPGA_lite\18.1\NIOS_5\core.qsys --block-symbol-file --output-directory=C:\intelFPGA_lite\18.1\NIOS_5\core --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading NIOS_5/core.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 18.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding altpll_1 [altpll 18.1]
+Progress: Parameterizing module altpll_1
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clk_1 [clock_source 18.1]
+Progress: Parameterizing module clk_1
+Progress: Adding master_0 [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module master_0
+Progress: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Progress: Parameterizing module mm_clock_crossing_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 18.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_flash_0 [altera_onchip_flash 18.1]
+Progress: Parameterizing module onchip_flash_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: core.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: core.modular_adc_0.st_splitter_internal.out0/sample_store_internal.response: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: core.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: core.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: core.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: core.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: core.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: core.modular_adc_0: modular_adc_0.adc_pll_locked must be exported, or connected to a matching conduit.
+Warning: core.modular_adc_0: Interrupt sender modular_adc_0.sample_store_irq is not connected to an interrupt receiver
+Warning: core.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: core.altpll_1: altpll_1.pll_slave must be connected to an Avalon-MM master
+Warning: core.master_0: master_0.master must be connected to an Avalon-MM slave
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\intelFPGA_lite\18.1\NIOS_5\core.qsys --synthesis=VERILOG --output-directory=C:\intelFPGA_lite\18.1\NIOS_5\core\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading NIOS_5/core.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 18.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding altpll_1 [altpll 18.1]
+Progress: Parameterizing module altpll_1
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding clk_1 [clock_source 18.1]
+Progress: Parameterizing module clk_1
+Progress: Adding master_0 [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module master_0
+Progress: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Progress: Parameterizing module mm_clock_crossing_bridge_0
+Progress: Adding modular_adc_0 [altera_modular_adc 18.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_flash_0 [altera_onchip_flash 18.1]
+Progress: Parameterizing module onchip_flash_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: core.modular_adc_0.control_internal.response/st_splitter_internal.in: The sink has a empty signal of 1 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: core.modular_adc_0.st_splitter_internal.out0/sample_store_internal.response: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: core.modular_adc_0.st_splitter_internal.out1/adc_monitor_internal.adc_data: The source has a empty signal of 1 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: core.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: core.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: core.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: core.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: core.modular_adc_0: modular_adc_0.adc_pll_locked must be exported, or connected to a matching conduit.
+Warning: core.modular_adc_0: Interrupt sender modular_adc_0.sample_store_irq is not connected to an interrupt receiver
+Warning: core.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: core.altpll_1: altpll_1.pll_slave must be connected to an Avalon-MM master
+Warning: core.master_0: master_0.master must be connected to an Avalon-MM slave
+Info: core: Generating core "core" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src5 and cmd_mux_005.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src6 and cmd_mux_006.sink0
+Info: Inserting clock-crossing logic between rsp_demux_005.src0 and rsp_mux.sink5
+Info: Inserting clock-crossing logic between rsp_demux_006.src0 and rsp_mux.sink6
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: altpll_0: "core" instantiated altpll "altpll_0"
+Info: altpll_1: "core" instantiated altpll "altpll_1"
+Info: master_0: "core" instantiated altera_jtag_avalon_master "master_0"
+Info: mm_clock_crossing_bridge_0: "core" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge_0"
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_1
+Info: avalon_st_adapter_001: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_1
+Info: avalon_st_adapter_002: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter_002: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_002: Inserting timing_adapter: timing_adapter_1
+Info: modular_adc_0: "core" instantiated altera_modular_adc "modular_adc_0"
+Info: nios2_gen2_0: "core" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_flash_0: Generating top-level entity altera_onchip_flash
+Info: onchip_flash_0: "core" instantiated altera_onchip_flash "onchip_flash_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'core_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=core_onchip_memory2_0 --dir=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0008_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0008_onchip_memory2_0_gen//core_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'core_onchip_memory2_0'
+Info: onchip_memory2_0: "core" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_0: Starting RTL generation for module 'core_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=core_pio_0 --dir=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0009_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0009_pio_0_gen//core_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'core_pio_0'
+Info: pio_0: "core" instantiated altera_avalon_pio "pio_0"
+Info: pio_1: Starting RTL generation for module 'core_pio_1'
+Info: pio_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=core_pio_1 --dir=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0010_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0010_pio_1_gen//core_pio_1_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_1: Done RTL generation for module 'core_pio_1'
+Info: pio_1: "core" instantiated altera_avalon_pio "pio_1"
+Info: sysid_qsys_0: "core" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: timer_0: Starting RTL generation for module 'core_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=core_timer_0 --dir=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0012_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0012_timer_0_gen//core_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'core_timer_0'
+Info: timer_0: "core" instantiated altera_avalon_timer "timer_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "core" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "core" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "core" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_synchronizer: "core" instantiated altera_irq_clock_crosser "irq_synchronizer"
+Info: rst_controller: "core" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: adc_monitor_internal: "modular_adc_0" instantiated altera_trace_adc_monitor "adc_monitor_internal"
+Info: sequencer_internal: "modular_adc_0" instantiated altera_modular_adc_sequencer "sequencer_internal"
+Info: sample_store_internal: "modular_adc_0" instantiated altera_modular_adc_sample_store "sample_store_internal"
+Info: st_splitter_internal: "modular_adc_0" instantiated altera_avalon_st_splitter "st_splitter_internal"
+Info: avalon_st_adapter: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "modular_adc_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: cpu: Starting RTL generation for module 'core_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=core_nios2_gen2_0_cpu --dir=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0028_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/MANISH/AppData/Local/Temp/alt9569_8854340047983333224.dir/0028_cpu_gen//core_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.07.31 23:20:33 (*) Starting Nios II generation
+Info: cpu: # 2023.07.31 23:20:33 (*)   Checking for plaintext license.
+Info: cpu: # 2023.07.31 23:20:34 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2023.07.31 23:20:34 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2023.07.31 23:20:34 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2023.07.31 23:20:34 (*)   Plaintext license not found.
+Info: cpu: # 2023.07.31 23:20:34 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2023.07.31 23:20:35 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2023.07.31 23:20:35 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2023.07.31 23:20:35 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2023.07.31 23:20:35 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2023.07.31 23:20:35 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.07.31 23:20:35 (*)   Creating all objects for CPU
+Info: cpu: # 2023.07.31 23:20:35 (*)     Testbench
+Info: cpu: # 2023.07.31 23:20:35 (*)     Instruction decoding
+Info: cpu: # 2023.07.31 23:20:35 (*)       Instruction fields
+Info: cpu: # 2023.07.31 23:20:35 (*)       Instruction decodes
+Info: cpu: # 2023.07.31 23:20:36 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2023.07.31 23:20:36 (*)       Instruction controls
+Info: cpu: # 2023.07.31 23:20:36 (*)     Pipeline frontend
+Info: cpu: # 2023.07.31 23:20:36 (*)     Pipeline backend
+Info: cpu: # 2023.07.31 23:20:39 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.07.31 23:20:40 (*)   Creating encrypted RTL
+Info: cpu: # 2023.07.31 23:20:41 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'core_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: onchip_flash_0_csr_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_flash_0_csr_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: onchip_flash_0_csr_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "onchip_flash_0_csr_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_demux_005: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_005"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/intelFPGA_lite/18.1/NIOS_5/core/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: altera_trace_adc_monitor_wa_inst: "Generating: altera_trace_adc_monitor_wa_inst"
+Info: core: "adc_monitor_internal" instantiated altera_trace_adc_monitor_core "core"
+Info: trace_endpoint: "adc_monitor_internal" instantiated altera_trace_monitor_endpoint "trace_endpoint"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_1"
+Info: data_format_adapter_0: "avalon_st_adapter_001" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_1: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_1"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: altera_trace_adc_monitor_wa_inst: "core" instantiated altera_trace_adc_monitor_core "altera_trace_adc_monitor_wa_inst"
+Info: altera_trace_adc_monitor_wa_inst: "altera_trace_adc_monitor_wa_inst" instantiated altera_trace_adc_monitor_wa "altera_trace_adc_monitor_wa_inst"
+Info: core: Done "core" with 72 modules, 119 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

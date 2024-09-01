@@ -70,6 +70,4 @@ The design was verified using Platform Designer's built-in simulation tools, ens
 
 This project demonstrates the integration of various IP cores into a cohesive embedded system using the NIOS II softcore processor. The design process involved configuring each component to meet specific requirements, resulting in a customizable and efficient platform for embedded applications.
 
----
 
-This README provides a concise summary of the key elements of your project, focusing on the most important configurations and their reasons. Let me know if you'd like any changes!

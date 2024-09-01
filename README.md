@@ -1,49 +1,75 @@
-# CORES Softcore Processor Repository
 
-Welcome to the CORES Softcore Processor repository! This repository showcases the development and integration of a powerful softcore processor into FPGA-based designs using Quartus Prime Lite (version 18.1) and Platform Designer (formerly known as Qsys).
+# NIOS II Softcore Processor Platform
 
-## Project Highlights
+## Overview
 
-The CORES softcore processor is designed to offer a flexible and configurable processing unit, enabling seamless integration into FPGA projects. This repository includes:
+This project involves designing a NIOS II softcore processor platform using FPGA. The platform integrates various peripherals, memory components, and interfaces to create a customizable embedded system. The design was implemented using the Intel Platform Designer tool, which facilitates the configuration and connection of IP cores.
 
-- **Customizable Components:** Explore the integration of key components such as PLL (Phase-Locked Loop) for clock management, ADC (Analog-to-Digital Converter) for handling analog data, on-chip memory (RAM and flash) for data storage, and clock crossing bridges for managing clock signals effectively.
+## Key Components and Configurations
 
-- **Step-by-Step Integration:** Follow detailed step-by-step instructions to integrate the CORES softcore processor into your FPGA designs. We provide clear guidance on setting up a new project, configuring components, establishing connections, and generating the required HDL (Verilog) code.
+### NIOS II Processor
+- **Type:** NIOS II F (Fast Version)
+- **JTAG Debug:** Configured with two hardware breakpoints.
+- **Cache Settings:**
+  - Instruction Cache: 2 KB
+  - Data Cache: 2 KB
+- **Vector Settings:**
+  - Reset Vector Memory: NIOS II Gen 2 Debug Mem Slave
+  - Exception Vector: NIOS II Gen 2 0 Debug Mem Slave
 
-- **Video Tutorial:** Access a comprehensive video tutorial that accompanies this repository. The tutorial walks you through the entire integration process, making it easier to understand and implement the CORES softcore processor in your FPGA projects.
+### Memory Components
+- **On-Chip RAM:**
+  - **Size:** 16,384 bytes
+  - **Base Address:** 0x4000
+  - **Connections:** Instruction Master and Data Master of NIOS II Processor
 
-- **Advanced FPGA Design Concepts:** As a bonus, we recommend an advanced FPGA design course that covers a wide range of topics, including softcore processors, FPGA cloud resources, and practical exercises to enhance your FPGA design skills.
+- **Flash Memory:**
+  - **Configuration Mode:** Single uncompressed image with memory initialization
+  - **CFM Items:** Read and Write
+  - **Clock Source:** 80 MHz
+  - **Base Addresses:**
+    - Data: 0x20000
+    - CSR: 0x40000
 
-## Getting Started
+### Peripheral Components
+- **Avalon Memory-Mapped Clock Crossing Bridge:** 
+  - **Addressing:** WORDS
+  - **FIFO Settings:** Command 8, Response 32
 
-To get started with the CORES softcore processor project, follow these steps:
+- **Parallel I/O:**
+  - **Output Width:** 10
+  - **Input Width:** 10 (connected to slide switches on the demo board)
+  - **Settings:** Synchronous capture, IRQ edge-sensitive, drive input 3FF
 
-1. **Download the Repository:** Download the entire repository (ZIP format) to your local computer.
+- **Interval Timer:**
+  - **Timeout Period:** 1 second
 
-2. **Open Quartus Prime:** Launch Quartus Prime Lite (version 18.1) on your computer.
+- **Modular ADC:**
+  - **Channel Used:** 1
+  - **Sequencer Slots:** 1
+  - **Base Addresses:**
+    - Sequencer CSR: 0x0080
+    - Sample Store CSR: 0x0200
 
-3. **Open the Project:** Navigate to the downloaded folder and locate the 'NIOS_5' folder. Inside this folder, you'll find the 'cores.qsys' file. Double-click on this file to open it in Platform Designer.
+- **JTAG to Avalon Master Bridge and JTAG UART:**
+  - **Default Settings:** Retained
 
-4. **Edit the Softcore Processor:** Use Platform Designer to customize and configure the CORES softcore processor according to your project requirements. Make changes to the components, connections, clock settings, memory, and more.
+- **System ID:**
+  - **ID Value:** ABCD
+  - **Width:** 32 bits
 
-5. **Run on DE10 Lite FPGA Board:** To run your customized CORES softcore processor on the DE10 Lite FPGA board, follow these steps:
-   - Connect the DE10 Lite FPGA board to your computer.
-   - Compile the project in Quartus Prime.
-   - Program the FPGA with the compiled bitstream file.
-   - Observe the behavior of the softcore processor on the DE10 Lite board and test its functionality.
+## Design Implementation
 
-## Video Tutorial
+### Global Resets
+A Global Reset Network was created to ensure all IPs are properly reset during the operation of the platform.
 
-I highly recommend watching the video tutorial to see the entire integration process in action:
+### System Verification
+The design was verified using Platform Designer's built-in simulation tools, ensuring that all connections and configurations were correctly implemented.
 
-[Link to Video Tutorial](https://www.coursera.org/learn/fpga-softcore-proccessors-ip/lecture/ckJZL/platform-designer-live-demo)
+## Conclusion
 
-## Advanced Course
-
-Explore the world of advanced FPGA design by enrolling in the following course:
-
-[Course Title: Advanced FPGA Design with Quartus Prime and Softcore Processors](https://www.coursera.org/learn/fpga-softcore-proccessors-ip/home)
-
-Take your FPGA design skills to the next level with this comprehensive course that covers advanced topics and practical exercises.
+This project demonstrates the integration of various IP cores into a cohesive embedded system using the NIOS II softcore processor. The design process involved configuring each component to meet specific requirements, resulting in a customizable and efficient platform for embedded applications.
 
 ---
+
+This README provides a concise summary of the key elements of your project, focusing on the most important configurations and their reasons. Let me know if you'd like any changes!
